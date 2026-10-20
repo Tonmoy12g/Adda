@@ -32,8 +32,15 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # ---------------- Config ----------------
-TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "").strip()
-GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "").strip()
+# সহজ পদ্ধতি: নিচের দুই জায়গায় নিজের token আর key বসিয়ে দিন (""-এর ভেতরে)।
+# ⚠️ সতর্কতা: token/key বসানো ফাইল GitHub-এ দিলে repo অবশ্যই PRIVATE রাখতে হবে!
+# Public repo হলে token/key চুরি হয়ে যাবে। চাইলে Render-এর Environment থেকেও
+# দেওয়া যায় — তখন নিচের জায়গা ফাঁকা রাখলেই হবে।
+PASTE_TELEGRAM_TOKEN_HERE = ""
+PASTE_GEMINI_KEY_HERE = ""
+
+TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "").strip() or PASTE_TELEGRAM_TOKEN_HERE.strip()
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "").strip() or PASTE_GEMINI_KEY_HERE.strip()
 
 if not TELEGRAM_BOT_TOKEN:
     raise RuntimeError("TELEGRAM_BOT_TOKEN env var is missing!")
