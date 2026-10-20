@@ -40,7 +40,7 @@ PASTE_TELEGRAM_TOKEN_HERE = ""
 PASTE_GEMINI_KEY_HERE = ""
 
 TELEGRAM_BOT_TOKEN = os.environ.get("8954461989:AAFkvebJe-Z_Koc3AQSoveMZouy8-pLnqHM", "").strip() or PASTE_TELEGRAM_TOKEN_HERE.strip()
-GEMINI_API_KEY = os.environ.get("", "").strip() or PASTE_GEMINI_KEY_HERE.strip()
+GEMINI_API_KEY = os.environ.get(""AQ.Ab8RN6K7ge9Yn9MXyY0vB4htiXtfJ1DDIiSFif_XC-pK_9SP1Q, "").strip() or PASTE_GEMINI_KEY_HERE.strip()
 
 if not TELEGRAM_BOT_TOKEN:
     raise RuntimeError("TELEGRAM_BOT_TOKEN env var is missing!")
