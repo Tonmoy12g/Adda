@@ -39,8 +39,8 @@ logger = logging.getLogger(__name__)
 PASTE_TELEGRAM_TOKEN_HERE = ""
 PASTE_GEMINI_KEY_HERE = ""
 
-TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "").strip() or PASTE_TELEGRAM_TOKEN_HERE.strip()
-GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "").strip() or PASTE_GEMINI_KEY_HERE.strip()
+TELEGRAM_BOT_TOKEN = os.environ.get("8954461989:AAFkvebJe-Z_Koc3AQSoveMZouy8-pLnqHM", "").strip() or PASTE_TELEGRAM_TOKEN_HERE.strip()
+GEMINI_API_KEY = os.environ.get("", "").strip() or PASTE_GEMINI_KEY_HERE.strip()
 
 if not TELEGRAM_BOT_TOKEN:
     raise RuntimeError("TELEGRAM_BOT_TOKEN env var is missing!")
